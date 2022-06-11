@@ -6,7 +6,7 @@ const userModel = {
         return true;
     },
     findById: (id) =>{
-        database.users.find(user => user.id === id)
+        return database.users.find(user => user.id === id)
     },
     deleteById: (id) => {
         database.users.filter(user => user.id !== id)
@@ -20,6 +20,9 @@ const userModel = {
     getAllUsers: () => {
         const users = database.users;
         return users;
+    },
+    getUserByEmail: (email) => {
+        return database.users.find(user => user.email === email)
     }
 
 }

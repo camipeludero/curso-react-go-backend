@@ -1,10 +1,11 @@
 //simulador de db
 const database = {
-    users: {
+    users: [{
         id: 1,
         name: "Pepe",
-        password: "1234"
-    }
+        password: "1234",
+        email: "pepe"
+    }]
 }
 
 module.exports = database;
